@@ -1,0 +1,26 @@
+<!-- public/favicon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Weather App</title>
+  <defs>
+    <!-- Optional: auto-tint for dark mode -->
+    <style>
+      .cloud { fill:#60a5fa; }
+      .sun { fill:#fbbf24; }
+      @media (prefers-color-scheme: dark) {
+        .cloud { fill:#93c5fd; }
+        .sun { fill:#fde68a; }
+      }
+    </style>
+  </defs>
+
+  <!-- Sun -->
+  <circle class="sun" cx="20" cy="20" r="10"></circle>
+  <!-- Sun rays -->
+  <g opacity="0.9">
+    <path d="M20 4v6M20 30v6M4 20h6M30 20h6M7.6 7.6l4.2 4.2M28.2 28.2l4.2 4.2M7.6 32.4l4.2-4.2M28.2 11.8l4.2-4.2" stroke="#fbbf24" stroke-width="3" stroke-linecap="round" fill="none"></path>
+  </g>
+
+  <!-- Cloud -->
+  <path class="cloud" d="M46 45a9 9 0 0 0-1.7-17.8A12 12 0 0 0 23 29c-6.1 0-11 4.5-11 10s4.9 10 11 10h22c5 0 9-3.6 9-8s-4-8-8-8" transform="translate(0,-2)"></path>
+
+</svg>

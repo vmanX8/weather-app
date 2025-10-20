@@ -1,0 +1,29 @@
+.search {
+display: grid;
+grid-template-columns: 1fr auto auto;
+gap: 0.6rem;
+margin: 1rem 0 1.25rem;
+}
+
+
+.input { width: 100%; }
+.button { background: var(--accent); color: #0b1220; font-weight: 600; }
+.secondary { background: #0b1020; color: var(--text); border: 1px solid #263248; }
+.secondary:hover { background: #0e1428; }
+
+
+/* toggle */
+.toggle { display: inline-flex; align-items: center; gap: .5rem; }
+.toggleLabel { font-variant-numeric: tabular-nums; color: var(--muted); }
+.switch { position: relative; width: 44px; height: 26px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider {
+position: absolute; inset: 0; background: #0b1020; border: 1px solid #263248; border-radius: 999px;
+}
+.switch input:checked + .slider { background: #10203a; }
+.slider::after {
+content: '';
+position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: var(--accent);
+transition: transform .2s ease;
+}
+.switch input:checked + .slider::after { transform: translateX(18px); }
